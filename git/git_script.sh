@@ -55,4 +55,4 @@ git merge dev
 git checkout main
 git merge test
 
-git log --graph --decorate
+git log --graph --decorate --all
