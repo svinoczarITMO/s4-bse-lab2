@@ -82,10 +82,10 @@ git commit -m "r13"
 git config --local user.name "red"
 git config --local user.email "owner@gmail.com"
 git checkout main
-git merge test
-git add .
-git commit -m "merge test into main"      
 unzip -o ../commits/commit14.zip -d .
+git merge --no-ff test
+# git add .
+# git commit -m "merge test into main"      
 git add .
 git commit -m "r14"
 
