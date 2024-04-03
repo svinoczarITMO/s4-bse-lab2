@@ -1,78 +1,92 @@
-#!/bin/zsh
+#!/bin/sh
+mkdir git
+cd git 
 git init
-echo "initial commit" >> commit.txt
+
+git config --local user.name "red"
+git config --local user.email "owner@gmail.com"
+git checkout -b main
+unzip -o ../commits/commit0.zip -d .
 git add .
 git commit -m "r0"
 
-git branch dev
-git checkout dev
-echo "r1" >> commit.txt
-git add .
-git commit -m "r1"
+git config --local user.name "blue"
+git config --local user.email "contributor@gmail.com"
+git checkout -b dev
+unzip -o ../commits/commit1.zip -d .
+git add .              
+git commit -m "r1"     
 
-echo "create tests branch" >> commit.txt
-git add .
-git commit -m "r2"
+unzip -o ../commits/commit2.zip -d .
+git add .              
+git commit -m "r2"     
 
-git branch test
-git checkout test
-echo "TEST1" >> commit.txt
-git add .
-git commit -m "r3"
-
-git checkout dev
-echo "fix1" >> commit.txt
-git add .
-git commit -m "r4"
-
-git checkout test
-echo "TEST2" >> commit.txt
-git add .
-git commit -m "r5"
+git config --local user.name "blue"
+git config --local user.email "contributor@gmail.com"
+git checkout -b test
+unzip -o ../commits/commit3.zip -d .
+git add .                                        
+git commit -m "r3"  
 
 git checkout dev
-echo "fix2" >> commit.txt
-git add .
-git commit -m "r6"
-
-echo "fix2.2" >> commit.txt
-git add .
-git commit -m "r7"
+unzip -o ../commits/commit4.zip -d .
+git add .                                        
+git commit -m "r4"  
 
 git checkout test
-echo "TEST3" >> commit.txt
-git add .
-git commit -m "r8"
-
-echo "TEST4" >> commit.txt
-git add .
-git commit -m "r9"
+unzip -o ../commits/commit5.zip -d .
+git add .                                        
+git commit -m "r5" 
 
 git checkout dev
-echo "fix3" >> commit.txt
-git add .
-git commit -m "r10"
+unzip -o ../commits/commit6.zip -d .
+git add .                                        
+git commit -m "r6" 
+
+unzip -o ../commits/commit7.zip -d .
+git add .                                        
+git commit -m "r7" 
 
 git checkout test
-echo "TEST5" >> commit.txt
-git add .
-git commit -m "r11"
+unzip -o ../commits/commit8.zip -d .
+git add .                                        
+git commit -m "r8" 
+
+unzip -o ../commits/commit9.zip -d .
+git add .                                        
+git commit -m "r9" 
 
 git checkout dev
-echo "fix4" >> commit.txt
-git add . 
-git commit -m "r12"
+unzip -o ../commits/commit10.zip -d .
+git add .                                        
+git commit -m "r10" 
 
 git checkout test
-git merge dev
-echo "merge dev -> test" >> commit.txt
+unzip -o ../commits/commit11.zip -d .
+git add .                                        
+git commit -m "r11" 
+
+git checkout dev
+unzip -o ../commits/commit12.zip -d .
+git add .                                        
+git commit -m "r12" 
+
+git checkout test
+git merge dev                       
+git add .           
+git commit -m "merge dev into test"      
+unzip -o ../commits/commit13.zip -d .
 git add .
 git commit -m "r13"
 
+git config --local user.name "red"
+git config --local user.email "owner@gmail.com"
 git checkout main
 git merge test
-echo "merge test -> main" >> commit.txt
+git add .
+git commit -m "merge test into main"      
+unzip -o ../commits/commit14.zip -d .
 git add .
 git commit -m "r14"
 
-git log --graph --decorate --all --oneline
+git log --graph --pretty=oneline --abbrev-commit --all --decorate
