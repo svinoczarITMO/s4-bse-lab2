@@ -84,8 +84,6 @@ git config --local user.email "owner@gmail.com"
 git checkout main
 unzip -o ../commits/commit14.zip -d .
 git merge --no-ff test
-# git add .
-# git commit -m "merge test into main"      
 git add .
 git commit -m "r14"
 
