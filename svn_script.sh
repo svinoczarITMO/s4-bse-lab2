@@ -59,13 +59,13 @@ svn commit -m "r9" --username "blue"
 
 svn switch file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/test
 svn merge file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/testSecond file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/test --username "blue"
-svn commit -m "merge testSecond into test" --username "blue"
+# svn commit -m "merge testSecond into test" --username "blue"
 unzip -o ../../commits/commit10.zip -d .
 svn commit -m "r10" --username "blue"
 
 svn switch file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/dev
 svn merge file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/test file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/dev --username "blue"
-svn commit -m "merge test into dev" --username "blue"
+# svn commit -m "merge test into dev" --username "blue"
 unzip -o ../../commits/commit11.zip -d .
 svn commit -m "r11" --username "blue"
 
@@ -77,7 +77,7 @@ svn commit -m "r13" --username "blue"
 
 svn switch file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/trunk
 svn merge file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/branches/dev file:///Users/aleksandrbabushkin/ITMO/4th-semester/basics-of-software-eng/s4-bse-lab2/svn/svnrepo/trunk --username "red"
-svn commit -m "merge dev into trunk" --username "red"
+# svn commit -m "merge dev into trunk" --username "red"
 unzip -o ../../commits/commit14.zip -d .
 svn commit -m "r14" --username "red"
 

@@ -73,8 +73,8 @@ git commit -m "r12"
 
 git checkout test
 git merge dev                       
-git add .           
-git commit -m "merge dev into test"      
+# git add .           
+# git commit -m "merge dev into test"      
 unzip -o ../commits/commit13.zip -d .
 git add .
 git commit -m "r13"
